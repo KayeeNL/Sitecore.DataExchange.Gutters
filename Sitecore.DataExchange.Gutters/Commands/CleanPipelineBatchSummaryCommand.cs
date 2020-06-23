@@ -1,12 +1,12 @@
-﻿namespace Sitecore.DataExchange.Gutters.Commands
-{
-    using System;
-    using Data;
-    using Data.Items;
-    using Shell.Framework.Commands;
-    using Sitecore.Diagnostics;
-    using Web.UI.Sheer;
+﻿using System;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Sitecore.Shell.Framework.Commands;
+using Sitecore.Web.UI.Sheer;
 
+namespace Sitecore.DataExchange.Gutters.Commands
+{
     [Serializable]
     public class CleanPipelineBatchSummaryCommand : Command
     {
@@ -16,7 +16,7 @@
         {
             Assert.ArgumentNotNull(context, nameof(context));
             var item = context.Items[0];
-            if (item.TemplateID != this.PipelineBatchTemplateId)
+            if (item.TemplateID != PipelineBatchTemplateId)
             {
                 SheerResponse.Alert("The context item is not Pipeline Batch.");
                 return;
