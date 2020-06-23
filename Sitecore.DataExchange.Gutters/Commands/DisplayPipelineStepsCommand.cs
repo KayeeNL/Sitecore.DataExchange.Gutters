@@ -1,32 +1,31 @@
-﻿namespace Sitecore.DataExchange.Gutters.Commands
-{
-    using System.Collections.Generic;
-    using System.Linq;
-    using Common;
-    using Data;
-    using Data.Items;
-    using localhost;
-    using Pipelines.GetLookupSourceItems;
-    using Shell.Framework.Commands;
-    using Sitecore.Diagnostics;
-    using Web.UI.Sheer;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Sitecore.Data;
+using Sitecore.Data.Fields;
+using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Sitecore.Shell.Framework.Commands;
+using Sitecore.Web.UI.Sheer;
 
+namespace Sitecore.DataExchange.Gutters.Commands
+{
     public class DisplayPipelineStepsCommand : Command
     {
         protected readonly ID PipelineBatchTemplateId = new ID("{075C4FBD-F54E-4E6D-BD54-D49BDA0913D8}");
-        
+
         public override void Execute(CommandContext context)
         {
             Assert.ArgumentNotNull(context, nameof(context));
             var item = context.Items[0];
-            if (item.TemplateID != this.PipelineBatchTemplateId)
+            if (item.TemplateID != PipelineBatchTemplateId)
             {
                 SheerResponse.Alert("The context item is not Pipeline Batch.");
                 return;
             }
+
             var db = item.Database;
 
-            var pipelines = this.GetPipelines(item);
+            var pipelines = GetPipelines(item);
 
             var enumerable = pipelines as ID[] ?? pipelines.ToArray();
             if (!enumerable.Any())
@@ -37,14 +36,11 @@
 
             var list = new List<ID>();
 
-            foreach (var pipeline in enumerable)
-            {
-                list.AddRange(this.GetSteps(pipeline, db));
-            }
+            foreach (var pipeline in enumerable) list.AddRange(GetSteps(pipeline, db));
 
-            string str = string.Empty;
+            var str = string.Empty;
 
-            int k = 0;
+            var k = 0;
             foreach (var id in list)
             {
                 ++k;
@@ -52,12 +48,11 @@
             }
 
             Sitecore.Context.ClientPage.ClientResponse.Alert(str);
-
         }
 
         protected virtual IEnumerable<ID> GetPipelines(Item item)
         {
-            var multilistField = (Sitecore.Data.Fields.MultilistField)item.Fields["Pipelines"];
+            var multilistField = (MultilistField) item.Fields["Pipelines"];
 
             return multilistField == null ? Enumerable.Empty<ID>() : multilistField.TargetIDs;
         }
@@ -71,11 +66,8 @@
                 list.Add(item.ID);
                 if (!string.IsNullOrEmpty(item["Pipelines"]))
                 {
-                    var pipelines = this.GetPipelines(item);
-                    foreach (var pipeline in pipelines)
-                    {
-                        list.AddRange(this.GetSteps(pipeline, database));
-                    }
+                    var pipelines = GetPipelines(item);
+                    foreach (var pipeline in pipelines) list.AddRange(GetSteps(pipeline, database));
                 }
             }
 

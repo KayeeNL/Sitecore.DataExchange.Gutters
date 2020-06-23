@@ -1,12 +1,11 @@
-﻿namespace Sitecore.DataExchange.Gutters.Commands
-{
-    using System;
-    using Data;
-    using Shell.Framework.Commands;
-    using Sitecore.Diagnostics;
-    using Web.UI.HtmlControls;
-    using Web.UI.Sheer;
+﻿using System;
+using Sitecore.Diagnostics;
+using Sitecore.Shell.Framework.Commands;
+using Sitecore.Web.UI.HtmlControls;
+using Sitecore.Web.UI.Sheer;
 
+namespace Sitecore.DataExchange.Gutters.Commands
+{
     [Serializable]
     public class PipelineStepContextMenuCommand : Command
     {
@@ -14,8 +13,9 @@
         {
             Assert.ArgumentNotNull(context, nameof(context));
 
-            Menu menu = new Menu();
+            var menu = new Menu();
             SheerResponse.DisableOutput();
+
             menu.Add("Display Required", "Applications/32x32/warning.png", "dataExchange:displayRequired");
 
             SheerResponse.EnableOutput();
