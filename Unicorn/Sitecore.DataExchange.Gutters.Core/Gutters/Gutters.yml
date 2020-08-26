@@ -1,0 +1,19 @@
+﻿---
+ID: "59f37069-3118-4151-8c01-5da0ef12cb4e"
+Parent: "7eada46b-11e2-4ec1-8c44-be75784ff105"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Applications/Content Editor/Gutters
+DB: core
+BranchID: "30235f43-6242-4107-87ab-5267e34edf0c"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20070307T100105
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
