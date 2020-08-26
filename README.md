@@ -41,8 +41,8 @@ There is a single option for selected pipeline step is to **display required plu
 
 # Downloads
 
-- [Gutters for Sitecore Data Exchange Framework 1.0.0 rev. 170202](./source/packages/Gutters%20for%20Sitecore%20Data&20Exchange%20Framework%201.0.0%20rev.%20170202.zip) (pre Sitecore 9.3)
-- [Gutters for Sitecore Data Exchange Framework-Sitecore 9.3.0 for DEF 4.0.0](.source/packages/Gutters%20for%20Sitecore%20Data%20Exchange%20Framework-Sitecore%209.3.0%20for%20DEF%204.0.0.zip)
+- [Gutters for Sitecore Data Exchange Framework 1.0.0 rev. 170202](source/packages/Gutters%20for%20Sitecore%20Data&20Exchange%20Framework%201.0.0%20rev.%20170202.zip) (pre Sitecore 9.3)
+- [Gutters for Sitecore Data Exchange Framework-Sitecore 9.3.0 for DEF 4.0.0](source/packages/Gutters%20for%20Sitecore%20Data%20Exchange%20Framework-Sitecore%209.3.0%20for%20DEF%204.0.0.zip)
 
 # Contributors
 
