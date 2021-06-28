@@ -7,9 +7,9 @@ The current solutions were designed mainly for [Sitecore Data Exchange Framework
 There are three available gutters for DEF.
 
 - [Gutters for Sitecore Data Exchange Framework](#gutters-for-sitecore-data-exchange-framework)
-    - [DataExchange - Item Disabled](#dataexchange---item-disabled)
-    - [DataExchange - Pipeline Batch](#dataexchange---pipeline-batch)
-    - [DataExchange - Pipeline Step](#dataexchange---pipeline-step)
+  - [DataExchange - Item Disabled](#dataexchange---item-disabled)
+  - [DataExchange - Pipeline Batch](#dataexchange---pipeline-batch)
+  - [DataExchange - Pipeline Step](#dataexchange---pipeline-step)
 - [Downloads](#downloads)
 - [Contributors](#contributors)
 
@@ -48,6 +48,7 @@ _Right click 'Save link as...' since GitHub doesn't respect url encoding, but ma
 - [Gutters for Sitecore Data Exchange Framework-Sitecore 10.0.0 for DEF 5.0.0](./source/packages/Gutters%20for%20Sitecore%20Data%20Exchange%20Framework-Sitecore%2010.0.0%20for%20DEF%205.0.0.zip)
 - [Gutters for Sitecore Data Exchange Framework-Sitecore 10.0.1 for DEF 5.0.0](./source/packages/Gutters%20for%20Sitecore%20Data%20Exchange%20Framework-Sitecore%2010.0.1%20for%20DEF%205.0.0.zip)
 - [Gutters for Sitecore Data Exchange Framework-Sitecore 10.1.0 for DEF 5.0.0](./source/packages/Gutters%20for%20Sitecore%20Data%20Exchange%20Framework-Sitecore%2010.1.0%20for%20DEF%205.0.0.zip)
+- [Gutters for Sitecore Data Exchange Framework-Sitecore 10.1.1 for DEF 6.0.0](./source/packages/Gutters%20for%20Sitecore%20Data%20Exchange%20Framework-Sitecore%2010.1.1%20for%20DEF%206.0.0.zip)
 
 # Contributors
 
@@ -55,6 +56,6 @@ _Originally developed by:_
 
 Vlad Shpak - Twitter: [@vladcheg](https://twitter.com/vladcheg), GitHub: https://github.com/vladcheg
 
-_Upgraded to Sitecore 9.3 (DEF 4.0.0), Sitecore 10.0.0, Sitecore 10.0.1, Sitecore 10.1.0 (DEF 5.0.0) + introduced Unicorn_
+_Upgraded to Sitecore 9.3 (DEF 4.0.0), Sitecore 10.0.0, Sitecore 10.0.1, Sitecore 10.1.0 (DEF 5.0.0), Sitecore 10.1.1 (DEF 6.0.0) + introduced Unicorn_
 
 Robbert Hock - Twitter: [@kayeeNL](https://twitter.com/kayeenl), GitHub: https://github.com/KayeeNL
